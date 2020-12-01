@@ -10,7 +10,6 @@ import {
 import '../css/User.css'
 import ReactMarkdown from "react-markdown";
 const Utils = require('../utils').default;
-const adsManager = require('../adsManager').default
 
 /**
  * User about page with all the public information a casual and power user would need to see about another user.
@@ -34,8 +33,6 @@ class User extends Component {
             hbdBalance: (await accountBalances).hbd,
             username: this.state.reflink.root
         })
-
-       
     }
     get coverURL() {
         switch (this.state.reflink.source.value) {
